@@ -26,7 +26,7 @@ __menu__
         sudo adduser $usuario
         ;;
     2)
-        seleccion_usuario=$(getent passwd {1000..1500} | cut -d: -f1)
+        seleccion_usuario=$(getent passwd {1000..1500} | cut -d: -f1 | grep -v $(whoami))
             while true; do
                 echo "Selecciona un usuario: (0-Atrás)"
                 select usuario in $seleccion_usuario; do
@@ -43,7 +43,7 @@ __menu__
         done    
         ;;
     3)
-        seleccion_usuario=$(getent passwd {1000..1500} | cut -d: -f1)
+        seleccion_usuario=$(getent passwd {1000..1500} | cut -d: -f1 | grep -v $(whoami))
             while true; do
                 echo "Selecciona un usuario: (0-Atrás)"
                 select usuario in $seleccion_usuario; do
@@ -60,7 +60,7 @@ __menu__
         done 
         ;;
     4)
-        seleccion_usuario=$(getent passwd {1000..1500} | cut -d: -f1)
+        seleccion_usuario=$(getent passwd {1000..1500} | cut -d: -f1 | grep -v $(whoami))
             while true; do
                 echo "Selecciona un usuario: (0-Atrás)"
                 select usuario in $seleccion_usuario; do
@@ -77,7 +77,7 @@ __menu__
         done 
         ;;
     5)  
-        seleccion_usuario=$(getent passwd {1000..1500} | cut -d: -f1)
+        seleccion_usuario=$(getent passwd {1000..1500} | cut -d: -f1 | grep -v $(whoami))
             while true; do
                 echo "Selecciona un usuario: (0-Atrás)"
                 select usuario in $seleccion_usuario; do
